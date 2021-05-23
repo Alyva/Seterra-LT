@@ -229,28 +229,59 @@ const dataLog = new Map([
     ["Trinidadas ir Tobagas", "Port of Speinas"],
 ])
 
+// Render text
 const text = document.createElement("h1")
 document.body.appendChild(text)
 
-text.style.position = "fixed"
-text.style.bottom = "0"
-text.style.right = "0"
-text.style.fontFamily = "Arial, sans-serif"
-text.style.color = "grey"
-text.style.textTransform = "capitalize"
+const ts = text.style
+ts.position = "fixed"
+ts.bottom = "0"
+ts.right = "0"
+ts.fontFamily = "Arial, sans-serif"
+ts.color = "grey"
+ts.textTransform = "capitalize"
+ts.fontSize = "24px" // Pasirink koki nori teksto dydi. Pakeisk tik skaičiu
+
+// Functionality
+const landArea = document.querySelectorAll(".landarea")
+const gameWindow = document.querySelector(".gamewindow")
+const svgPoint = document.querySelector("#svgpoint")
+let showIt = 0
 
 const show = function () {
     let curStr = document.querySelector("#currQuestion").textContent
-    let country = Array.from(curStr.matchAll(/spausk\s(.+)/gi), m => m[1])[0]
-    text.textContent = dataLog.get(country)
+    let curCountry = Array.from(curStr.matchAll(/spausk\s(.+)/gi), m => m[1])[0]
+    text.textContent = dataLog.get(curCountry)
 }
 
-show()
+document.addEventListener("keydown", e => {
+    if (e.key === "+" && showIt === 0) {
+        showIt = 1
+        ts.display = "block"
+        show()
+    } else if (e.key === "+" && showIt === 1) {
+        showIt = 0
+        ts.display = "none"
+    }
+})
 
-document.querySelectorAll(".landarea").forEach(cur => {
-    cur.addEventListener("click", () => {
+landArea.forEach(cur => {
+    cur.addEventListener("click", e => {
         setTimeout(() => {
             show()
+            ts.color = "grey"
         }, 50)
+    })
+
+    cur.addEventListener("mouseover", e => {
+        let curStr = document.querySelector("#currQuestion").textContent
+        let curCountry = Array.from(curStr.matchAll(/spausk\s(.+)/gi), m => m[1])[0]
+        let curParent = e.target.parentNode.getAttribute("data-qText")
+
+        if (curParent === curCountry) {
+            ts.color = "rgba(0, 200, 0)"
+        } else {
+            ts.color = "rgba(255, 0, 0, 0.9)"
+        }
     })
 })
