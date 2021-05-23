@@ -10,6 +10,6 @@
 
 Note: 
 1. Sostinės bus apačioje-kairėje lango dalyje
-2. Norint įjungti/išjungti sostines spausk +
+2. Norint įjungti/išjungti sostines spausk '-' ženkla
 3. Tekstas bus raudonas jei pele laikai ne ant tos šalies
 4. Tesktas bus žalias jei pele laikai ant tam tikros šalies
