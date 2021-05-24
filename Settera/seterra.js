@@ -241,6 +241,20 @@ ts.fontFamily = "Arial, sans-serif"
 ts.color = "grey"
 ts.textTransform = "capitalize"
 ts.fontSize = "24px" // Pasirink koki nori teksto dydi. Pakeisk tik skaičiu
+ts.marginRight = "10px"
+
+// Render line
+const line = document.createElement("div")
+document.body.appendChild(line)
+
+const ls = line.style
+ls.position = "fixed"
+ls.top = "0"
+ls.right = "0"
+ls.width = "6px"
+ls.height = "100vh"
+ls.backgroundColor = "grey"
+ls.display = "none"
 
 // Functionality
 const landArea = document.querySelectorAll(".landarea")
@@ -258,10 +272,12 @@ document.addEventListener("keydown", e => {
     if (e.key === "-" && showIt === 0) {
         showIt = 1
         ts.display = "block"
+        ls.display = "block"
         show()
     } else if (e.key === "-" && showIt === 1) {
         showIt = 0
         ts.display = "none"
+        ls.display = "none"
     }
 })
 
@@ -270,6 +286,7 @@ landArea.forEach(cur => {
         setTimeout(() => {
             show()
             ts.color = "rgba(255, 0, 0, 0.9)"
+            ls.backgroundColor = "rgba(255, 0, 0, 0.9)"
         }, 50)
     })
 
@@ -280,8 +297,11 @@ landArea.forEach(cur => {
 
         if (curParent === curCountry) {
             ts.color = "rgba(0, 200, 0)"
+            ls.backgroundColor = "rgba(0, 200, 0)"
         } else {
             ts.color = "rgba(255, 0, 0, 0.9)"
+            ls.backgroundColor = "rgba(255, 0, 0, 0.9)"
         }
     })
 })
+
