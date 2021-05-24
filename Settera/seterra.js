@@ -227,6 +227,15 @@ const dataLog = new Map([
     ["Prancūzijos Gviana", "Kajena"],
     ["Barbadosas", "Bridžtaunas"],
     ["Trinidadas ir Tobagas", "Port of Speinas"],
+    ["Samoa", "Apija"],
+    ["Tonga", "Nukualofa"],
+    ["Tuvalu", "Funafutis"],
+    ["Palau", "Ngerulmudas"],
+    ["Vanuatu", "Port Vila"],
+    ["Mikronezijos Federacinės Valstijos", "Palikiras"],
+    ["Maršalo Salos", "Madžūras"],
+    ["Nauru", "Jarenas"],
+    ["Kiribatis", "Tarava"],
 ])
 
 // Render text
@@ -287,7 +296,7 @@ landArea.forEach(cur => {
             show()
             ts.color = "rgba(255, 0, 0, 0.9)"
             ls.backgroundColor = "rgba(255, 0, 0, 0.9)"
-        }, 50)
+        }, 100)
     })
 
     cur.addEventListener("mouseover", e => {
@@ -304,4 +313,5 @@ landArea.forEach(cur => {
         }
     })
 })
+
 
