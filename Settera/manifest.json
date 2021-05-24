@@ -1,0 +1,11 @@
+{
+    "name": "Seterra",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://online.seterra.com/lt/vgp/3007", "https://online.seterra.com/lt/vgp/3015", "https://online.seterra.com/lt/vgp/3016", "https://online.seterra.com/lt/vgp/3163", "https://online.seterra.com/lt/vgp/3167"],
+            "js": ["seterra.js"]
+        }
+    ]
+}
