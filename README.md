@@ -1,4 +1,4 @@
-# Settera-LT
+# Seterra-LT
 Šalys ir Sostinės
 
 1. Nukopijuok viska kas yra settera.txt faile.
