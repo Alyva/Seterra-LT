@@ -1,15 +1,14 @@
 # Seterra-LT
 Šalys ir Sostinės
 
-1. Nukopijuok viska kas yra settera.txt faile.
-2. Įeik į Settera. // https://online.seterra.com/lt
-3. Pasirink šalis. // Pvz. Europa: šalys, Šiaurės ir Centrinė Amerika: šalys, Pietų Amerika: šalys, Afrika: šalys, Azija: šalys.
-4. Atidaryk "DevTools". // Spausk Ctrl+Shift+I arba F12
-5. Spustelk "Console", įterpk kodą kurį nukopijavai ir spausk Enter. // Console gali rasti eilutėje << Elements - Console - Sources - Network - Performance - Memory - Application - Security >> 
-6. Uždaryk "DevTools" ir mokinkis 😉
+1. Parsisiūskite failą "Seterra".
+2. Nueikite į naršyklę ir atidarykite savo plėtinius (angl. Extensions).
+3. Spauskit "Kūrėjo režimas" (angl. Developer mode).
+4. Tada spauskit "Įkelti neišpakuotą" (angl. Load unpacked) ir pasirinkit tą failą kurį parsisiuntėt.
+5. Nueikit į https://online.seterra.com/lt ir mokinkitės.
 
-Note: 
-1. Sostinės bus apačioje-kairėje lango dalyje
-2. Norint įjungti/išjungti sostines spausk '-' ženklą
-3. Tekstas bus raudonas jei pelę laikai ne ant tos šalies
-4. Tesktas bus žalias jei pelę laikai ant teisingos šalies
+NOTE: 
+1. Spausk "-" ženklą, kad pasirodytų sostinė.
+2. Sostinęs bus kairėje-apačioje lango dalyje.
+3. Jeigu ant teisingos šalies užvedei su pelyte, tekstas bus žalias.
+4. Jeigu and neteisingos, tekstas bus raudonas.
